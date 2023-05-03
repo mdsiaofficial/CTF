@@ -21,7 +21,8 @@ t = (p-1) * (q-1)
 d = pow(e, -1, t);
 
 plain = pow(c, d, n)
-print(plain)
-print(hex(plain))
-# print(hex(plain)[2:].decode('ascii')) #this code works in python 2
-print(bytearray.fromhex(hex(plain)[2:]).decode('ascii'))
+print("Plain:\n", plain)
+print("Hexadecimal:\n", hex(plain))
+print("Hexadecimal without 0x:\n", hex(plain)[2:]) 
+# print("Hexadecimal without 0x: ", hex(plain)[2:].decode('ascii')) #this code works in python 2
+print("Hex to ASCII:\n", bytearray.fromhex(hex(plain)[2:]).decode('ascii'))
